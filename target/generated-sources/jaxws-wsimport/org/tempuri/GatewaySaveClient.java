@@ -1,0 +1,206 @@
+
+package org.tempuri;
+
+import javax.xml.bind.JAXBElement;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementRef;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
+
+
+/**
+ * <p>Java class for anonymous complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType>
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="SessionToken" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="RepositoryID" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="GatewayEnabled" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="GatewayDownloadFolder" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="GatewayUploadFolder" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="GatewayHL7UploadFolder" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "", propOrder = {
+    "sessionToken",
+    "repositoryID",
+    "gatewayEnabled",
+    "gatewayDownloadFolder",
+    "gatewayUploadFolder",
+    "gatewayHL7UploadFolder"
+})
+@XmlRootElement(name = "GatewaySaveClient")
+public class GatewaySaveClient {
+
+    @XmlElementRef(name = "SessionToken", namespace = "http://tempuri.org/", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> sessionToken;
+    @XmlElement(name = "RepositoryID")
+    protected Integer repositoryID;
+    @XmlElement(name = "GatewayEnabled")
+    protected Boolean gatewayEnabled;
+    @XmlElementRef(name = "GatewayDownloadFolder", namespace = "http://tempuri.org/", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> gatewayDownloadFolder;
+    @XmlElementRef(name = "GatewayUploadFolder", namespace = "http://tempuri.org/", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> gatewayUploadFolder;
+    @XmlElementRef(name = "GatewayHL7UploadFolder", namespace = "http://tempuri.org/", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> gatewayHL7UploadFolder;
+
+    /**
+     * Gets the value of the sessionToken property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getSessionToken() {
+        return sessionToken;
+    }
+
+    /**
+     * Sets the value of the sessionToken property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setSessionToken(JAXBElement<String> value) {
+        this.sessionToken = value;
+    }
+
+    /**
+     * Gets the value of the repositoryID property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
+     */
+    public Integer getRepositoryID() {
+        return repositoryID;
+    }
+
+    /**
+     * Sets the value of the repositoryID property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
+     */
+    public void setRepositoryID(Integer value) {
+        this.repositoryID = value;
+    }
+
+    /**
+     * Gets the value of the gatewayEnabled property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isGatewayEnabled() {
+        return gatewayEnabled;
+    }
+
+    /**
+     * Sets the value of the gatewayEnabled property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setGatewayEnabled(Boolean value) {
+        this.gatewayEnabled = value;
+    }
+
+    /**
+     * Gets the value of the gatewayDownloadFolder property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getGatewayDownloadFolder() {
+        return gatewayDownloadFolder;
+    }
+
+    /**
+     * Sets the value of the gatewayDownloadFolder property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setGatewayDownloadFolder(JAXBElement<String> value) {
+        this.gatewayDownloadFolder = value;
+    }
+
+    /**
+     * Gets the value of the gatewayUploadFolder property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getGatewayUploadFolder() {
+        return gatewayUploadFolder;
+    }
+
+    /**
+     * Sets the value of the gatewayUploadFolder property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setGatewayUploadFolder(JAXBElement<String> value) {
+        this.gatewayUploadFolder = value;
+    }
+
+    /**
+     * Gets the value of the gatewayHL7UploadFolder property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getGatewayHL7UploadFolder() {
+        return gatewayHL7UploadFolder;
+    }
+
+    /**
+     * Sets the value of the gatewayHL7UploadFolder property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setGatewayHL7UploadFolder(JAXBElement<String> value) {
+        this.gatewayHL7UploadFolder = value;
+    }
+
+}

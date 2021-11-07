@@ -2,8 +2,8 @@ package com.hienetworks.nwhin.docretrieve.adapter;
 
 public class Demo {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
         try
         {
             HIENDocRetrieveClient client = HIENDocRetrieveClient.getInstance();
@@ -14,5 +14,5 @@ public class Demo {
         {
             System.out.println("ERROR : " + e.getMessage());
         }
-	}	
+    }	
 }

@@ -16,6 +16,7 @@ org\datacontract\schemas\_2004\_07\hielibrary\RHINFilesEntity.class
 org\tempuri\AuthenticateGatewayRepositoryResponse.class
 org\tempuri\AddOrganizationReferralStatus.class
 org\tempuri\package-info.class
+com\hienetworks\nwhin\docretrieve\adapter\HIENDocRetrieveClient$MissingURLException.class
 org\tempuri\PingGatewayResponse.class
 org\datacontract\schemas\_2004\_07\hielibrary\UserSessionEntity.class
 org\tempuri\GatewayUploadHL7MessageResponse.class

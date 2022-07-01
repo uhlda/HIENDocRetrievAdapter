@@ -14,7 +14,19 @@ import org.tempuri.RHINWebService;
 import gov.hhs.fha.nhinc.properties.PropertyAccessor;
 import java.util.Map;
 import java.util.logging.Level;
+import oasis.names.tc.ebxml_regrep.xsd.rim._3.SlotType1;
+import oasis.names.tc.ebxml_regrep.xsd.rim._3.ValueListType;
 
+/**
+ * ITI-39 / Retrieve Document (RD)
+ * <p>
+ * This section corresponds to transaction ITI-39 of the IHE Technical Framework. 
+ * Transaction 3325 ITI-39 is used by the Initiating Gateway and Responding Gateway Actors.
+ * Similar to the ITI-43 / Retrieve Document Set
+ * @see IHE.ITI.TF Rev14.0 3.39 Cross Gateway Retrieve [ITI-39]
+ * 
+ * @author auhl
+ */
 public class HIENDocRetrieveClient {
 	private static final Logger logger = Logger.getLogger(HIENDocRetrieveClient.class);
 	private PropertyAccessor propertyAccessor = PropertyAccessor.getInstance();
@@ -22,9 +34,12 @@ public class HIENDocRetrieveClient {
 	private static Resource rdWsdl = new DefaultResourceLoader()
 			.getResource("classpath:wsdl/RHINWebService1.wsdl");
 	private static HIENDocRetrieveClient client = null;
-    private final static int CONNECTION_TIMEOUT = 60000;
+    private final static int CONNECTION_TIMEOUT = 120000;
     private final static String CENTRALIS_AUTHENTICATION_TOKEN = "9DB9082B-68F3-4A7B-8B11-1BA0649945DE";
  
+    /**
+     *
+     */
     public String AuthToken = "";
 	
 	private HIENDocRetrieveClient() throws MissingURLException {
@@ -37,14 +52,25 @@ public class HIENDocRetrieveClient {
 		}
 	}
 	
-	public static HIENDocRetrieveClient getInstance() throws MissingURLException {
+    /**
+     *
+     * @return
+     * @throws MissingURLException
+     */
+    public static HIENDocRetrieveClient getInstance() throws MissingURLException {
 		if(null == client) {
 			client = new HIENDocRetrieveClient();
 		}
 		return client;
 	}
 	
-	public void init() throws IOException, PropertyAccessException, MissingURLException {
+    /**
+     *
+     * @throws IOException
+     * @throws PropertyAccessException
+     * @throws MissingURLException
+     */
+    public void init() throws IOException, PropertyAccessException, MissingURLException {
 
         // Fetch RHINWebService URL from Gateway .properties file
         String urlString = propertyAccessor.getProperty(NhincConstants.GATEWAY_PROPERTY_FILE,"RHINWebServiceUrl");
@@ -70,7 +96,12 @@ public class HIENDocRetrieveClient {
 		rdContext.put("com.sun.xml.internal.ws.request.timeout", CONNECTION_TIMEOUT);
 	}
     
-	public String sendData(String uniqueKey) {
+    /**
+     *
+     * @param uniqueKey
+     * @return
+     */
+    public String sendData(String uniqueKey) {
 
 		String response = null;
 		try {
@@ -82,7 +113,15 @@ public class HIENDocRetrieveClient {
 		return response;
 	}
     
+    /**
+     * Make sure that a missing URL is a bad thing
+     */
     public class MissingURLException extends Exception {
+
+        /**
+         * Inherit from baseline Exception
+         * @param message Whatever additional condition information
+         */
         public MissingURLException(String message) {
             super(message);
         }

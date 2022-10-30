@@ -97,15 +97,24 @@ public class HIENDocRetrieveClient {
 	}
     
     /**
+    * IRHINWebService Interface Snippet with API Call profile
+    * There were significant changes (additional args) due to a 
+    * RHINWebService.wsdl update
+    * (2022-10-27)
+    * 
+    */
+    
+    /**
      *
      * @param uniqueKey
      * @return
      */
-    public String sendData(String uniqueKey) {
+    public String sendData(String uniqueKey, String senderHCID) {
 
 		String response = null;
 		try {
-			response = rdPort.getCONNECTCCDADocument(AuthToken, uniqueKey);
+			response = rdPort.getCONNECTCCDADocument(AuthToken, uniqueKey, senderHCID);
+			logger.error("HIENDocRetrieveClient Response: "+response);            
 		} catch (Exception e) {
 			logger.error("error while calling RepositoryPatientCCDADocument service", e);
 		}

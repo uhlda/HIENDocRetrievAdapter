@@ -9,14 +9,14 @@ import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.datatype.XMLGregorianCalendar;
 import javax.xml.ws.RequestWrapper;
 import javax.xml.ws.ResponseWrapper;
-import org.datacontract.schemas._2004._07.hielibrary.ArrayOfClinicalDocumentEntity;
 import org.datacontract.schemas._2004._07.hielibrary.FilesEntity;
 import org.datacontract.schemas._2004._07.hielibrary.GenericEntity;
-import org.datacontract.schemas._2004._07.hielibrary.PatientEntity;
+import org.datacontract.schemas._2004._07.hielibrary.PatientRMPIEntity;
 import org.datacontract.schemas._2004._07.hielibrary.RHINFilesEntity;
 import org.datacontract.schemas._2004._07.hielibrary.RHINRepositoryEntity;
 import org.datacontract.schemas._2004._07.hielibrary.RHINUserEntity;
 import org.datacontract.schemas._2004._07.hielibrary.UserDesktopActionsEntity;
+import org.datacontract.schemas._2004._07.hielibrary_entities.ArrayOfClinicalDocumentEntity;
 
 
 /**
@@ -30,6 +30,7 @@ import org.datacontract.schemas._2004._07.hielibrary.UserDesktopActionsEntity;
     com.microsoft.schemas._2003._10.serialization.ObjectFactory.class,
     com.microsoft.schemas._2003._10.serialization.arrays.ObjectFactory.class,
     org.datacontract.schemas._2004._07.hielibrary.ObjectFactory.class,
+    org.datacontract.schemas._2004._07.hielibrary_entities.ObjectFactory.class,
     org.tempuri.ObjectFactory.class
 })
 public interface IRHINWebService {
@@ -415,18 +416,24 @@ public interface IRHINWebService {
      * 
      * @param lastName
      * @param firstName
+     * @param address
      * @param gender
+     * @param city
      * @param dob
+     * @param postalCode
      * @param sessionToken
+     * @param callingOID
+     * @param repositoryOID
+     * @param state
      * @param ssn
      * @return
-     *     returns org.datacontract.schemas._2004._07.hielibrary.PatientEntity
+     *     returns org.datacontract.schemas._2004._07.hielibrary.PatientRMPIEntity
      */
     @WebMethod(operationName = "GetCONNECTPatient", action = "http://tempuri.org/IRHINWebService/GetCONNECTPatient")
     @WebResult(name = "GetCONNECTPatientResult", targetNamespace = "http://tempuri.org/")
     @RequestWrapper(localName = "GetCONNECTPatient", targetNamespace = "http://tempuri.org/", className = "org.tempuri.GetCONNECTPatient")
     @ResponseWrapper(localName = "GetCONNECTPatientResponse", targetNamespace = "http://tempuri.org/", className = "org.tempuri.GetCONNECTPatientResponse")
-    public PatientEntity getCONNECTPatient(
+    public PatientRMPIEntity getCONNECTPatient(
         @WebParam(name = "SessionToken", targetNamespace = "http://tempuri.org/")
         String sessionToken,
         @WebParam(name = "LastName", targetNamespace = "http://tempuri.org/")
@@ -438,16 +445,29 @@ public interface IRHINWebService {
         @WebParam(name = "DOB", targetNamespace = "http://tempuri.org/")
         XMLGregorianCalendar dob,
         @WebParam(name = "SSN", targetNamespace = "http://tempuri.org/")
-        String ssn);
+        String ssn,
+        @WebParam(name = "Address", targetNamespace = "http://tempuri.org/")
+        String address,
+        @WebParam(name = "City", targetNamespace = "http://tempuri.org/")
+        String city,
+        @WebParam(name = "State", targetNamespace = "http://tempuri.org/")
+        String state,
+        @WebParam(name = "PostalCode", targetNamespace = "http://tempuri.org/")
+        String postalCode,
+        @WebParam(name = "RepositoryOID", targetNamespace = "http://tempuri.org/")
+        String repositoryOID,
+        @WebParam(name = "CallingOID", targetNamespace = "http://tempuri.org/")
+        String callingOID);
 
     /**
      * 
      * @param primaryRMPINumber
      * @param endDate
      * @param sessionToken
+     * @param callingOID
      * @param startDate
      * @return
-     *     returns org.datacontract.schemas._2004._07.hielibrary.ArrayOfClinicalDocumentEntity
+     *     returns org.datacontract.schemas._2004._07.hielibrary_entities.ArrayOfClinicalDocumentEntity
      */
     @WebMethod(operationName = "GetCONNECTClinicalDocumentList", action = "http://tempuri.org/IRHINWebService/GetCONNECTClinicalDocumentList")
     @WebResult(name = "GetCONNECTClinicalDocumentListResult", targetNamespace = "http://tempuri.org/")
@@ -461,11 +481,14 @@ public interface IRHINWebService {
         @WebParam(name = "StartDate", targetNamespace = "http://tempuri.org/")
         XMLGregorianCalendar startDate,
         @WebParam(name = "EndDate", targetNamespace = "http://tempuri.org/")
-        XMLGregorianCalendar endDate);
+        XMLGregorianCalendar endDate,
+        @WebParam(name = "CallingOID", targetNamespace = "http://tempuri.org/")
+        String callingOID);
 
     /**
      * 
      * @param sessionToken
+     * @param callingOID
      * @param uniqueID
      * @return
      *     returns java.lang.String
@@ -478,7 +501,9 @@ public interface IRHINWebService {
         @WebParam(name = "SessionToken", targetNamespace = "http://tempuri.org/")
         String sessionToken,
         @WebParam(name = "UniqueID", targetNamespace = "http://tempuri.org/")
-        String uniqueID);
+        String uniqueID,
+        @WebParam(name = "CallingOID", targetNamespace = "http://tempuri.org/")
+        String callingOID);
 
     /**
      * 

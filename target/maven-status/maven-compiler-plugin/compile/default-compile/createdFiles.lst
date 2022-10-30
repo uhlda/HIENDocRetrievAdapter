@@ -1,7 +1,8 @@
+org\datacontract\schemas\_2004\_07\hielibrary\PatientRMPIEntity.class
 com\hienetworks\nwhin\docretrieve\adapter\HIENDocRetrieveImpl.class
+org\datacontract\schemas\_2004\_07\hielibrary_entities\ArrayOfClinicalDocumentEntity.class
 org\tempuri\GatewayDownloadUpdateRHINFileStatusResponse.class
 org\tempuri\DesktopGetUserActionsResponse.class
-org\datacontract\schemas\_2004\_07\hielibrary\ClinicalDocumentEntity.class
 org\tempuri\DesktopSaveUserSettings.class
 org\datacontract\schemas\_2004\_07\hielibrary\ObjectFactory.class
 org\tempuri\GatewayDownloadUpdateRHINFileStatus.class
@@ -32,6 +33,7 @@ org\datacontract\schemas\_2004\_07\hielibrary\RepositorySessionEntity.class
 org\datacontract\schemas\_2004\_07\hielibrary\RHINUserEntity.class
 org\tempuri\LogMessageResponse.class
 org\tempuri\GatewayGet.class
+org\datacontract\schemas\_2004\_07\hielibrary_entities\ObjectFactory.class
 com\hienetworks\nwhin\docretrieve\adapter\HIENDocRetrieveClient.class
 org\tempuri\LogoutUser.class
 org\datacontract\schemas\_2004\_07\hielibrary\FileEntity.class
@@ -44,6 +46,7 @@ com\microsoft\schemas\_2003\_10\serialization\arrays\ArrayOfstring.class
 org\datacontract\schemas\_2004\_07\hielibrary\package-info.class
 org\tempuri\GatewayUploadFileGetStatus.class
 org\tempuri\GetCONNECTClinicalDocumentListResponse.class
+org\datacontract\schemas\_2004\_07\hielibrary_entities\ClinicalDocumentEntity.class
 org\datacontract\schemas\_2004\_07\hielibrary\ArrayOfRHINFileEntity.class
 org\tempuri\GatewaySaveClient.class
 com\microsoft\schemas\_2003\_10\serialization\arrays\ArrayOfint.class
@@ -66,10 +69,10 @@ org\tempuri\GetCONNECTCCDADocument.class
 org\tempuri\GetCONNECTClinicalDocumentList.class
 org\tempuri\DesktopDeleteUserAction.class
 org\tempuri\GatewayUploadFileGetStatusResponse.class
-org\datacontract\schemas\_2004\_07\hielibrary\PatientEntity.class
 org\datacontract\schemas\_2004\_07\hielibrary\ParticipantEntity.class
 org\tempuri\GetUserResponse.class
 org\datacontract\schemas\_2004\_07\hielibrary\RHINUserEntityUserAcknowledgement.class
+org\datacontract\schemas\_2004\_07\hielibrary_entities\package-info.class
 org\tempuri\DeleteReferralOrganizationStatusResponse.class
 org\tempuri\DesktopSaveUserSettingsResponse.class
 org\tempuri\AuthenticateGatewayRepository.class
@@ -87,7 +90,6 @@ org\datacontract\schemas\_2004\_07\hielibrary\ArrayOfRHINUserEntityUserOrganizat
 org\datacontract\schemas\_2004\_07\hielibrary\RHINRepositoryEntity.class
 org\tempuri\AddOrganizationReferralStatusResponse.class
 org\tempuri\DesktopUpdateUploadFileStatus.class
-org\datacontract\schemas\_2004\_07\hielibrary\ArrayOfClinicalDocumentEntity.class
 org\datacontract\schemas\_2004\_07\hielibrary\UserEntity.class
 org\tempuri\ObjectFactory.class
 org\tempuri\AuthenticateUser.class

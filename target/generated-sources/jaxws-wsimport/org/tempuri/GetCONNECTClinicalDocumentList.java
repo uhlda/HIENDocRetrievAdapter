@@ -24,6 +24,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="PrimaryRMPINumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="StartDate" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
  *         &lt;element name="EndDate" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
+ *         &lt;element name="CallingOID" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -37,7 +38,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "sessionToken",
     "primaryRMPINumber",
     "startDate",
-    "endDate"
+    "endDate",
+    "callingOID"
 })
 @XmlRootElement(name = "GetCONNECTClinicalDocumentList")
 public class GetCONNECTClinicalDocumentList {
@@ -50,6 +52,8 @@ public class GetCONNECTClinicalDocumentList {
     protected JAXBElement<XMLGregorianCalendar> startDate;
     @XmlElementRef(name = "EndDate", namespace = "http://tempuri.org/", type = JAXBElement.class, required = false)
     protected JAXBElement<XMLGregorianCalendar> endDate;
+    @XmlElementRef(name = "CallingOID", namespace = "http://tempuri.org/", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> callingOID;
 
     /**
      * Gets the value of the sessionToken property.
@@ -145,6 +149,30 @@ public class GetCONNECTClinicalDocumentList {
      */
     public void setEndDate(JAXBElement<XMLGregorianCalendar> value) {
         this.endDate = value;
+    }
+
+    /**
+     * Gets the value of the callingOID property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getCallingOID() {
+        return callingOID;
+    }
+
+    /**
+     * Sets the value of the callingOID property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setCallingOID(JAXBElement<String> value) {
+        this.callingOID = value;
     }
 
 }

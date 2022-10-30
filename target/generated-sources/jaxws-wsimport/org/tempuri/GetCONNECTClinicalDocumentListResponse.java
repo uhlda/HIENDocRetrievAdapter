@@ -7,7 +7,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElementRef;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
-import org.datacontract.schemas._2004._07.hielibrary.ArrayOfClinicalDocumentEntity;
+import org.datacontract.schemas._2004._07.hielibrary_entities.ArrayOfClinicalDocumentEntity;
 
 
 /**
@@ -20,7 +20,7 @@ import org.datacontract.schemas._2004._07.hielibrary.ArrayOfClinicalDocumentEnti
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="GetCONNECTClinicalDocumentListResult" type="{http://schemas.datacontract.org/2004/07/HIELibrary.Entities}ArrayOfClinicalDocumentEntity" minOccurs="0"/>
+ *         &lt;element name="GetCONNECTClinicalDocumentListResult" type="{http://schemas.datacontract.org/2004/07/HIELibrary.Entities.CDA}ArrayOfClinicalDocumentEntity" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>

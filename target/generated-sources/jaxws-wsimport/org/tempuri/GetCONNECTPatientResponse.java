@@ -7,7 +7,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElementRef;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
-import org.datacontract.schemas._2004._07.hielibrary.PatientEntity;
+import org.datacontract.schemas._2004._07.hielibrary.PatientRMPIEntity;
 
 
 /**
@@ -20,7 +20,7 @@ import org.datacontract.schemas._2004._07.hielibrary.PatientEntity;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="GetCONNECTPatientResult" type="{http://schemas.datacontract.org/2004/07/HIELibrary.Entities}PatientEntity" minOccurs="0"/>
+ *         &lt;element name="GetCONNECTPatientResult" type="{http://schemas.datacontract.org/2004/07/HIELibrary.Entities}PatientRMPIEntity" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -37,17 +37,17 @@ import org.datacontract.schemas._2004._07.hielibrary.PatientEntity;
 public class GetCONNECTPatientResponse {
 
     @XmlElementRef(name = "GetCONNECTPatientResult", namespace = "http://tempuri.org/", type = JAXBElement.class, required = false)
-    protected JAXBElement<PatientEntity> getCONNECTPatientResult;
+    protected JAXBElement<PatientRMPIEntity> getCONNECTPatientResult;
 
     /**
      * Gets the value of the getCONNECTPatientResult property.
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link PatientEntity }{@code >}
+     *     {@link JAXBElement }{@code <}{@link PatientRMPIEntity }{@code >}
      *     
      */
-    public JAXBElement<PatientEntity> getGetCONNECTPatientResult() {
+    public JAXBElement<PatientRMPIEntity> getGetCONNECTPatientResult() {
         return getCONNECTPatientResult;
     }
 
@@ -56,10 +56,10 @@ public class GetCONNECTPatientResponse {
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link PatientEntity }{@code >}
+     *     {@link JAXBElement }{@code <}{@link PatientRMPIEntity }{@code >}
      *     
      */
-    public void setGetCONNECTPatientResult(JAXBElement<PatientEntity> value) {
+    public void setGetCONNECTPatientResult(JAXBElement<PatientRMPIEntity> value) {
         this.getCONNECTPatientResult = value;
     }
 

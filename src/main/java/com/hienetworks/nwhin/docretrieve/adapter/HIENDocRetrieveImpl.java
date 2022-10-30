@@ -72,7 +72,7 @@ public class HIENDocRetrieveImpl implements gov.hhs.fha.nhinc.adapterdocretrieve
             // Call Client / Send Request
             // ****************************************************************
             
-			String clientResponse = client.sendData(docUniqueId);
+			String clientResponse = client.sendData(docUniqueId, homeComunityId);
             
 			if (null != clientResponse && !clientResponse.isEmpty()) {
             

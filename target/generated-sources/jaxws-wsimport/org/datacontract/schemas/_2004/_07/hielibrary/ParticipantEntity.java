@@ -27,11 +27,12 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="BillingStateCode" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="City" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="ContractDate" type="{http://www.w3.org/2001/XMLSchema}dateTime"/>
+ *         &lt;element name="DefaultOutboundFaxNumber" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="DefaultRepositoryID" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="Discription" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="DocumentRootFolderHeader" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="ExtenderCount" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="FaxSecureLinkPageTrigger" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="FaxSecureLinkPageTrigger" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="HealthSystemID" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="InvoiceDuration" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="IsActive" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
@@ -57,10 +58,12 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="ParticipantNameLegal" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="ParticipantTaxID" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="ParticipantTypeID" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="PhoneNumber" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="PhysicianCount" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="PostalCode" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="RegistrationAgreementLink" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="StateCode" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="WebsiteURL" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="_x003C_LastUpdateDateTime_x003E_k__BackingField" type="{http://www.w3.org/2001/XMLSchema}dateTime"/>
  *         &lt;element name="_x003C_UserUpdated_x003E_k__BackingField" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *       &lt;/sequence>
@@ -81,6 +84,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "billingStateCode",
     "city",
     "contractDate",
+    "defaultOutboundFaxNumber",
     "defaultRepositoryID",
     "discription",
     "documentRootFolderHeader",
@@ -111,10 +115,12 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "participantNameLegal",
     "participantTaxID",
     "participantTypeID",
+    "phoneNumber",
     "physicianCount",
     "postalCode",
     "registrationAgreementLink",
     "stateCode",
+    "websiteURL",
     "x003CLastUpdateDateTimeX003EKBackingField",
     "x003CUserUpdatedX003EKBackingField"
 })
@@ -139,6 +145,8 @@ public class ParticipantEntity
     @XmlElement(name = "ContractDate", required = true, nillable = true)
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar contractDate;
+    @XmlElement(name = "DefaultOutboundFaxNumber", required = true, nillable = true)
+    protected String defaultOutboundFaxNumber;
     @XmlElement(name = "DefaultRepositoryID")
     protected int defaultRepositoryID;
     @XmlElement(name = "Discription", required = true, nillable = true)
@@ -147,8 +155,8 @@ public class ParticipantEntity
     protected String documentRootFolderHeader;
     @XmlElement(name = "ExtenderCount")
     protected int extenderCount;
-    @XmlElement(name = "FaxSecureLinkPageTrigger", required = true, nillable = true)
-    protected String faxSecureLinkPageTrigger;
+    @XmlElement(name = "FaxSecureLinkPageTrigger")
+    protected int faxSecureLinkPageTrigger;
     @XmlElement(name = "HealthSystemID")
     protected int healthSystemID;
     @XmlElement(name = "InvoiceDuration", required = true, nillable = true)
@@ -199,6 +207,8 @@ public class ParticipantEntity
     protected String participantTaxID;
     @XmlElement(name = "ParticipantTypeID")
     protected int participantTypeID;
+    @XmlElement(name = "PhoneNumber", required = true, nillable = true)
+    protected String phoneNumber;
     @XmlElement(name = "PhysicianCount")
     protected int physicianCount;
     @XmlElement(name = "PostalCode", required = true, nillable = true)
@@ -207,6 +217,8 @@ public class ParticipantEntity
     protected String registrationAgreementLink;
     @XmlElement(name = "StateCode", required = true, nillable = true)
     protected String stateCode;
+    @XmlElement(name = "WebsiteURL", required = true, nillable = true)
+    protected String websiteURL;
     @XmlElement(name = "_x003C_LastUpdateDateTime_x003E_k__BackingField", required = true, nillable = true)
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar x003CLastUpdateDateTimeX003EKBackingField;
@@ -398,6 +410,30 @@ public class ParticipantEntity
     }
 
     /**
+     * Gets the value of the defaultOutboundFaxNumber property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getDefaultOutboundFaxNumber() {
+        return defaultOutboundFaxNumber;
+    }
+
+    /**
+     * Sets the value of the defaultOutboundFaxNumber property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setDefaultOutboundFaxNumber(String value) {
+        this.defaultOutboundFaxNumber = value;
+    }
+
+    /**
      * Gets the value of the defaultRepositoryID property.
      * 
      */
@@ -480,24 +516,16 @@ public class ParticipantEntity
     /**
      * Gets the value of the faxSecureLinkPageTrigger property.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
      */
-    public String getFaxSecureLinkPageTrigger() {
+    public int getFaxSecureLinkPageTrigger() {
         return faxSecureLinkPageTrigger;
     }
 
     /**
      * Sets the value of the faxSecureLinkPageTrigger property.
      * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
      */
-    public void setFaxSecureLinkPageTrigger(String value) {
+    public void setFaxSecureLinkPageTrigger(int value) {
         this.faxSecureLinkPageTrigger = value;
     }
 
@@ -950,6 +978,30 @@ public class ParticipantEntity
     }
 
     /**
+     * Gets the value of the phoneNumber property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    /**
+     * Sets the value of the phoneNumber property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setPhoneNumber(String value) {
+        this.phoneNumber = value;
+    }
+
+    /**
      * Gets the value of the physicianCount property.
      * 
      */
@@ -1035,6 +1087,30 @@ public class ParticipantEntity
      */
     public void setStateCode(String value) {
         this.stateCode = value;
+    }
+
+    /**
+     * Gets the value of the websiteURL property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getWebsiteURL() {
+        return websiteURL;
+    }
+
+    /**
+     * Sets the value of the websiteURL property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setWebsiteURL(String value) {
+        this.websiteURL = value;
     }
 
     /**

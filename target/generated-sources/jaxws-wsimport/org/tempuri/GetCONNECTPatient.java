@@ -26,6 +26,12 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="Gender" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="DOB" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
  *         &lt;element name="SSN" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="Address" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="City" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="State" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="PostalCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="RepositoryOID" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="CallingOID" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -41,7 +47,13 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "firstName",
     "gender",
     "dob",
-    "ssn"
+    "ssn",
+    "address",
+    "city",
+    "state",
+    "postalCode",
+    "repositoryOID",
+    "callingOID"
 })
 @XmlRootElement(name = "GetCONNECTPatient")
 public class GetCONNECTPatient {
@@ -58,6 +70,18 @@ public class GetCONNECTPatient {
     protected JAXBElement<XMLGregorianCalendar> dob;
     @XmlElementRef(name = "SSN", namespace = "http://tempuri.org/", type = JAXBElement.class, required = false)
     protected JAXBElement<String> ssn;
+    @XmlElementRef(name = "Address", namespace = "http://tempuri.org/", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> address;
+    @XmlElementRef(name = "City", namespace = "http://tempuri.org/", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> city;
+    @XmlElementRef(name = "State", namespace = "http://tempuri.org/", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> state;
+    @XmlElementRef(name = "PostalCode", namespace = "http://tempuri.org/", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> postalCode;
+    @XmlElementRef(name = "RepositoryOID", namespace = "http://tempuri.org/", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> repositoryOID;
+    @XmlElementRef(name = "CallingOID", namespace = "http://tempuri.org/", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> callingOID;
 
     /**
      * Gets the value of the sessionToken property.
@@ -201,6 +225,150 @@ public class GetCONNECTPatient {
      */
     public void setSSN(JAXBElement<String> value) {
         this.ssn = value;
+    }
+
+    /**
+     * Gets the value of the address property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getAddress() {
+        return address;
+    }
+
+    /**
+     * Sets the value of the address property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setAddress(JAXBElement<String> value) {
+        this.address = value;
+    }
+
+    /**
+     * Gets the value of the city property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getCity() {
+        return city;
+    }
+
+    /**
+     * Sets the value of the city property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setCity(JAXBElement<String> value) {
+        this.city = value;
+    }
+
+    /**
+     * Gets the value of the state property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getState() {
+        return state;
+    }
+
+    /**
+     * Sets the value of the state property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setState(JAXBElement<String> value) {
+        this.state = value;
+    }
+
+    /**
+     * Gets the value of the postalCode property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getPostalCode() {
+        return postalCode;
+    }
+
+    /**
+     * Sets the value of the postalCode property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setPostalCode(JAXBElement<String> value) {
+        this.postalCode = value;
+    }
+
+    /**
+     * Gets the value of the repositoryOID property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getRepositoryOID() {
+        return repositoryOID;
+    }
+
+    /**
+     * Sets the value of the repositoryOID property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setRepositoryOID(JAXBElement<String> value) {
+        this.repositoryOID = value;
+    }
+
+    /**
+     * Gets the value of the callingOID property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getCallingOID() {
+        return callingOID;
+    }
+
+    /**
+     * Sets the value of the callingOID property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setCallingOID(JAXBElement<String> value) {
+        this.callingOID = value;
     }
 
 }

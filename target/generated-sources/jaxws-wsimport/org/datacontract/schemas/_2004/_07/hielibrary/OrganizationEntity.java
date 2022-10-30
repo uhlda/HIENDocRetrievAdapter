@@ -49,6 +49,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="OrganizationTypeID" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="ParticipantID" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="ParticipantName" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="PhoneNumber" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="PhysicalAddress1" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="PhysicalAddress2" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="PhysicalCity" type="{http://www.w3.org/2001/XMLSchema}string"/>
@@ -99,6 +100,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "organizationTypeID",
     "participantID",
     "participantName",
+    "phoneNumber",
     "physicalAddress1",
     "physicalAddress2",
     "physicalCity",
@@ -174,6 +176,8 @@ public class OrganizationEntity
     protected int participantID;
     @XmlElement(name = "ParticipantName", required = true, nillable = true)
     protected String participantName;
+    @XmlElement(name = "PhoneNumber", required = true, nillable = true)
+    protected String phoneNumber;
     @XmlElement(name = "PhysicalAddress1", required = true, nillable = true)
     protected String physicalAddress1;
     @XmlElement(name = "PhysicalAddress2", required = true, nillable = true)
@@ -762,6 +766,30 @@ public class OrganizationEntity
      */
     public void setParticipantName(String value) {
         this.participantName = value;
+    }
+
+    /**
+     * Gets the value of the phoneNumber property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    /**
+     * Sets the value of the phoneNumber property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setPhoneNumber(String value) {
+        this.phoneNumber = value;
     }
 
     /**

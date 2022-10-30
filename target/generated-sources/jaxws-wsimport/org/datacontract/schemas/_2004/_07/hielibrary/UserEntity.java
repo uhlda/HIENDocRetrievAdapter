@@ -34,6 +34,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="ParticipantAuthorizedRHINUser" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="ParticipantAuthorizedRHINUserID" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="ParticipantID" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="PasswordResetRequestDateTime" type="{http://www.w3.org/2001/XMLSchema}dateTime"/>
+ *         &lt;element name="PasswordValidUntilDateTime" type="{http://www.w3.org/2001/XMLSchema}dateTime"/>
  *         &lt;element name="Picture" type="{http://www.w3.org/2001/XMLSchema}base64Binary"/>
  *         &lt;element name="RHINUserID" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="RHINUserName" type="{http://www.w3.org/2001/XMLSchema}string"/>
@@ -69,6 +71,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "participantAuthorizedRHINUser",
     "participantAuthorizedRHINUserID",
     "participantID",
+    "passwordResetRequestDateTime",
+    "passwordValidUntilDateTime",
     "picture",
     "rhinUserID",
     "rhinUserName",
@@ -114,6 +118,12 @@ public class UserEntity
     protected int participantAuthorizedRHINUserID;
     @XmlElement(name = "ParticipantID")
     protected int participantID;
+    @XmlElement(name = "PasswordResetRequestDateTime", required = true, nillable = true)
+    @XmlSchemaType(name = "dateTime")
+    protected XMLGregorianCalendar passwordResetRequestDateTime;
+    @XmlElement(name = "PasswordValidUntilDateTime", required = true, nillable = true)
+    @XmlSchemaType(name = "dateTime")
+    protected XMLGregorianCalendar passwordValidUntilDateTime;
     @XmlElement(name = "Picture", required = true, nillable = true)
     protected byte[] picture;
     @XmlElement(name = "RHINUserID")
@@ -430,6 +440,54 @@ public class UserEntity
      */
     public void setParticipantID(int value) {
         this.participantID = value;
+    }
+
+    /**
+     * Gets the value of the passwordResetRequestDateTime property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public XMLGregorianCalendar getPasswordResetRequestDateTime() {
+        return passwordResetRequestDateTime;
+    }
+
+    /**
+     * Sets the value of the passwordResetRequestDateTime property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public void setPasswordResetRequestDateTime(XMLGregorianCalendar value) {
+        this.passwordResetRequestDateTime = value;
+    }
+
+    /**
+     * Gets the value of the passwordValidUntilDateTime property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public XMLGregorianCalendar getPasswordValidUntilDateTime() {
+        return passwordValidUntilDateTime;
+    }
+
+    /**
+     * Sets the value of the passwordValidUntilDateTime property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public void setPasswordValidUntilDateTime(XMLGregorianCalendar value) {
+        this.passwordValidUntilDateTime = value;
     }
 
     /**

@@ -7,6 +7,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElementRef;
 import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
+import org.datacontract.schemas._2004._07.hielibrary_entities.ClinicalDocumentEntity;
 
 
 /**
@@ -41,7 +42,7 @@ import javax.xml.bind.annotation.XmlType;
     FilesEntity.class,
     UserDesktopActionsEntity.class,
     RHINRepositoryEntity.class,
-    PatientEntity.class,
+    PatientRMPIEntity.class,
     RHINUserEntity.class,
     GenericEntity.class,
     RepositorySessionEntity.class,

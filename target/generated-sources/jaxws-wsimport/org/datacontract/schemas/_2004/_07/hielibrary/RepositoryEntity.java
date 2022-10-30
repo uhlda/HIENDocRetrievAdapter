@@ -23,12 +23,14 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="ConfigurationFileLink" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="ConnectionString" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="DICOMID" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="DICOMLinkedDestination" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="DICOMNamespace" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="DICOMSerialNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="DatabaseName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="ENSSendMapping" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="ExportItems" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
  *         &lt;element name="ExportTypeID" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="FolderWatcherEnabled" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
  *         &lt;element name="GatewayAllowedIPAddress" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="GatewayDefaultAreaCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="GatewayDownloadCreateWorkQueueFolders" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
@@ -55,18 +57,27 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="InterfaceDBConnectionString" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="InterfaceDatabaseName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="IsActive" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="IsDICOMStudyAddRetrieve" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
  *         &lt;element name="IsProtected" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
  *         &lt;element name="IsTest" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
  *         &lt;element name="LastUpdateDateTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
+ *         &lt;element name="OID" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="ParticipantID" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="QueuedMessageFolder" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="ReferringOrganizationID" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
  *         &lt;element name="RepositoryID" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
  *         &lt;element name="RepositoryKey" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="RepositoryLoadEnabled" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="RepositoryLoadTypeID" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
  *         &lt;element name="RepositoryName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="RepositoryShortName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="SFTPRetrieveFolderPassword" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="SFTPRetrieveFolderURI" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="SFTPRetrieveFolderUsername" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="UserUpdated" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="XDSDBConnectionString" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="XDSDatabaseName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="eHxEnabled" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/extension>
  *   &lt;/complexContent>
@@ -80,12 +91,14 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "configurationFileLink",
     "connectionString",
     "dicomid",
+    "dicomLinkedDestination",
     "dicomNamespace",
     "dicomSerialNumber",
     "databaseName",
     "ensSendMapping",
     "exportItems",
     "exportTypeID",
+    "folderWatcherEnabled",
     "gatewayAllowedIPAddress",
     "gatewayDefaultAreaCode",
     "gatewayDownloadCreateWorkQueueFolders",
@@ -112,18 +125,27 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "interfaceDBConnectionString",
     "interfaceDatabaseName",
     "isActive",
+    "isDICOMStudyAddRetrieve",
     "isProtected",
     "isTest",
     "lastUpdateDateTime",
+    "oid",
     "participantID",
+    "queuedMessageFolder",
     "referringOrganizationID",
     "repositoryID",
     "repositoryKey",
+    "repositoryLoadEnabled",
+    "repositoryLoadTypeID",
     "repositoryName",
     "repositoryShortName",
+    "sftpRetrieveFolderPassword",
+    "sftpRetrieveFolderURI",
+    "sftpRetrieveFolderUsername",
     "userUpdated",
     "xdsdbConnectionString",
-    "xdsDatabaseName"
+    "xdsDatabaseName",
+    "eHxEnabled"
 })
 public class RepositoryEntity
     extends Entity
@@ -135,6 +157,8 @@ public class RepositoryEntity
     protected JAXBElement<String> connectionString;
     @XmlElementRef(name = "DICOMID", namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", type = JAXBElement.class, required = false)
     protected JAXBElement<String> dicomid;
+    @XmlElementRef(name = "DICOMLinkedDestination", namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> dicomLinkedDestination;
     @XmlElementRef(name = "DICOMNamespace", namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", type = JAXBElement.class, required = false)
     protected JAXBElement<String> dicomNamespace;
     @XmlElementRef(name = "DICOMSerialNumber", namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", type = JAXBElement.class, required = false)
@@ -147,6 +171,8 @@ public class RepositoryEntity
     protected Integer exportItems;
     @XmlElement(name = "ExportTypeID")
     protected Integer exportTypeID;
+    @XmlElement(name = "FolderWatcherEnabled")
+    protected Boolean folderWatcherEnabled;
     @XmlElementRef(name = "GatewayAllowedIPAddress", namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", type = JAXBElement.class, required = false)
     protected JAXBElement<String> gatewayAllowedIPAddress;
     @XmlElementRef(name = "GatewayDefaultAreaCode", namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", type = JAXBElement.class, required = false)
@@ -199,30 +225,47 @@ public class RepositoryEntity
     protected JAXBElement<String> interfaceDatabaseName;
     @XmlElement(name = "IsActive")
     protected Boolean isActive;
+    @XmlElement(name = "IsDICOMStudyAddRetrieve")
+    protected Boolean isDICOMStudyAddRetrieve;
     @XmlElement(name = "IsProtected")
     protected Boolean isProtected;
     @XmlElement(name = "IsTest")
     protected Boolean isTest;
     @XmlElementRef(name = "LastUpdateDateTime", namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", type = JAXBElement.class, required = false)
     protected JAXBElement<XMLGregorianCalendar> lastUpdateDateTime;
+    @XmlElementRef(name = "OID", namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> oid;
     @XmlElement(name = "ParticipantID")
     protected Integer participantID;
+    @XmlElementRef(name = "QueuedMessageFolder", namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> queuedMessageFolder;
     @XmlElement(name = "ReferringOrganizationID")
     protected Integer referringOrganizationID;
     @XmlElement(name = "RepositoryID")
     protected Integer repositoryID;
     @XmlElementRef(name = "RepositoryKey", namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", type = JAXBElement.class, required = false)
     protected JAXBElement<String> repositoryKey;
+    @XmlElement(name = "RepositoryLoadEnabled")
+    protected Boolean repositoryLoadEnabled;
+    @XmlElement(name = "RepositoryLoadTypeID")
+    protected Integer repositoryLoadTypeID;
     @XmlElementRef(name = "RepositoryName", namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", type = JAXBElement.class, required = false)
     protected JAXBElement<String> repositoryName;
     @XmlElementRef(name = "RepositoryShortName", namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", type = JAXBElement.class, required = false)
     protected JAXBElement<String> repositoryShortName;
+    @XmlElementRef(name = "SFTPRetrieveFolderPassword", namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> sftpRetrieveFolderPassword;
+    @XmlElementRef(name = "SFTPRetrieveFolderURI", namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> sftpRetrieveFolderURI;
+    @XmlElementRef(name = "SFTPRetrieveFolderUsername", namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> sftpRetrieveFolderUsername;
     @XmlElementRef(name = "UserUpdated", namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", type = JAXBElement.class, required = false)
     protected JAXBElement<String> userUpdated;
     @XmlElementRef(name = "XDSDBConnectionString", namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", type = JAXBElement.class, required = false)
     protected JAXBElement<String> xdsdbConnectionString;
     @XmlElementRef(name = "XDSDatabaseName", namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", type = JAXBElement.class, required = false)
     protected JAXBElement<String> xdsDatabaseName;
+    protected Boolean eHxEnabled;
 
     /**
      * Gets the value of the configurationFileLink property.
@@ -294,6 +337,30 @@ public class RepositoryEntity
      */
     public void setDICOMID(JAXBElement<String> value) {
         this.dicomid = value;
+    }
+
+    /**
+     * Gets the value of the dicomLinkedDestination property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getDICOMLinkedDestination() {
+        return dicomLinkedDestination;
+    }
+
+    /**
+     * Sets the value of the dicomLinkedDestination property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setDICOMLinkedDestination(JAXBElement<String> value) {
+        this.dicomLinkedDestination = value;
     }
 
     /**
@@ -438,6 +505,30 @@ public class RepositoryEntity
      */
     public void setExportTypeID(Integer value) {
         this.exportTypeID = value;
+    }
+
+    /**
+     * Gets the value of the folderWatcherEnabled property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isFolderWatcherEnabled() {
+        return folderWatcherEnabled;
+    }
+
+    /**
+     * Sets the value of the folderWatcherEnabled property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setFolderWatcherEnabled(Boolean value) {
+        this.folderWatcherEnabled = value;
     }
 
     /**
@@ -1065,6 +1156,30 @@ public class RepositoryEntity
     }
 
     /**
+     * Gets the value of the isDICOMStudyAddRetrieve property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isIsDICOMStudyAddRetrieve() {
+        return isDICOMStudyAddRetrieve;
+    }
+
+    /**
+     * Sets the value of the isDICOMStudyAddRetrieve property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setIsDICOMStudyAddRetrieve(Boolean value) {
+        this.isDICOMStudyAddRetrieve = value;
+    }
+
+    /**
      * Gets the value of the isProtected property.
      * 
      * @return
@@ -1137,6 +1252,30 @@ public class RepositoryEntity
     }
 
     /**
+     * Gets the value of the oid property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getOID() {
+        return oid;
+    }
+
+    /**
+     * Sets the value of the oid property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setOID(JAXBElement<String> value) {
+        this.oid = value;
+    }
+
+    /**
      * Gets the value of the participantID property.
      * 
      * @return
@@ -1158,6 +1297,30 @@ public class RepositoryEntity
      */
     public void setParticipantID(Integer value) {
         this.participantID = value;
+    }
+
+    /**
+     * Gets the value of the queuedMessageFolder property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getQueuedMessageFolder() {
+        return queuedMessageFolder;
+    }
+
+    /**
+     * Sets the value of the queuedMessageFolder property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setQueuedMessageFolder(JAXBElement<String> value) {
+        this.queuedMessageFolder = value;
     }
 
     /**
@@ -1233,6 +1396,54 @@ public class RepositoryEntity
     }
 
     /**
+     * Gets the value of the repositoryLoadEnabled property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isRepositoryLoadEnabled() {
+        return repositoryLoadEnabled;
+    }
+
+    /**
+     * Sets the value of the repositoryLoadEnabled property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setRepositoryLoadEnabled(Boolean value) {
+        this.repositoryLoadEnabled = value;
+    }
+
+    /**
+     * Gets the value of the repositoryLoadTypeID property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
+     */
+    public Integer getRepositoryLoadTypeID() {
+        return repositoryLoadTypeID;
+    }
+
+    /**
+     * Sets the value of the repositoryLoadTypeID property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
+     */
+    public void setRepositoryLoadTypeID(Integer value) {
+        this.repositoryLoadTypeID = value;
+    }
+
+    /**
      * Gets the value of the repositoryName property.
      * 
      * @return
@@ -1278,6 +1489,78 @@ public class RepositoryEntity
      */
     public void setRepositoryShortName(JAXBElement<String> value) {
         this.repositoryShortName = value;
+    }
+
+    /**
+     * Gets the value of the sftpRetrieveFolderPassword property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getSFTPRetrieveFolderPassword() {
+        return sftpRetrieveFolderPassword;
+    }
+
+    /**
+     * Sets the value of the sftpRetrieveFolderPassword property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setSFTPRetrieveFolderPassword(JAXBElement<String> value) {
+        this.sftpRetrieveFolderPassword = value;
+    }
+
+    /**
+     * Gets the value of the sftpRetrieveFolderURI property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getSFTPRetrieveFolderURI() {
+        return sftpRetrieveFolderURI;
+    }
+
+    /**
+     * Sets the value of the sftpRetrieveFolderURI property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setSFTPRetrieveFolderURI(JAXBElement<String> value) {
+        this.sftpRetrieveFolderURI = value;
+    }
+
+    /**
+     * Gets the value of the sftpRetrieveFolderUsername property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getSFTPRetrieveFolderUsername() {
+        return sftpRetrieveFolderUsername;
+    }
+
+    /**
+     * Sets the value of the sftpRetrieveFolderUsername property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setSFTPRetrieveFolderUsername(JAXBElement<String> value) {
+        this.sftpRetrieveFolderUsername = value;
     }
 
     /**
@@ -1350,6 +1633,30 @@ public class RepositoryEntity
      */
     public void setXDSDatabaseName(JAXBElement<String> value) {
         this.xdsDatabaseName = value;
+    }
+
+    /**
+     * Gets the value of the eHxEnabled property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isEHxEnabled() {
+        return eHxEnabled;
+    }
+
+    /**
+     * Sets the value of the eHxEnabled property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setEHxEnabled(Boolean value) {
+        this.eHxEnabled = value;
     }
 
 }

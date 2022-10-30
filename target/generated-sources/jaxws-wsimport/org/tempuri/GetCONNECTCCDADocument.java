@@ -21,6 +21,7 @@ import javax.xml.bind.annotation.XmlType;
  *       &lt;sequence>
  *         &lt;element name="SessionToken" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="UniqueID" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="CallingOID" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -32,7 +33,8 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
     "sessionToken",
-    "uniqueID"
+    "uniqueID",
+    "callingOID"
 })
 @XmlRootElement(name = "GetCONNECTCCDADocument")
 public class GetCONNECTCCDADocument {
@@ -41,6 +43,8 @@ public class GetCONNECTCCDADocument {
     protected JAXBElement<String> sessionToken;
     @XmlElementRef(name = "UniqueID", namespace = "http://tempuri.org/", type = JAXBElement.class, required = false)
     protected JAXBElement<String> uniqueID;
+    @XmlElementRef(name = "CallingOID", namespace = "http://tempuri.org/", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> callingOID;
 
     /**
      * Gets the value of the sessionToken property.
@@ -88,6 +92,30 @@ public class GetCONNECTCCDADocument {
      */
     public void setUniqueID(JAXBElement<String> value) {
         this.uniqueID = value;
+    }
+
+    /**
+     * Gets the value of the callingOID property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getCallingOID() {
+        return callingOID;
+    }
+
+    /**
+     * Sets the value of the callingOID property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setCallingOID(JAXBElement<String> value) {
+        this.callingOID = value;
     }
 
 }

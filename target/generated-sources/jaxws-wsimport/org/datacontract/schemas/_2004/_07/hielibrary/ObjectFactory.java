@@ -27,14 +27,13 @@ import com.microsoft.schemas._2003._10.serialization.arrays.ArrayOfstring;
 @XmlRegistry
 public class ObjectFactory {
 
+    private final static QName _PatientRMPIEntity_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "PatientRMPIEntity");
     private final static QName _Entity_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "Entity");
     private final static QName _RepositorySessionEntity_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "RepositorySessionEntity");
     private final static QName _RHINFileEntity_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "RHINFileEntity");
     private final static QName _ArrayOfRHINUserEntityUserPermissions_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "ArrayOfRHINUserEntity.UserPermissions");
-    private final static QName _PatientEntity_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "PatientEntity");
     private final static QName _DocumentEntity_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "DocumentEntity");
     private final static QName _RHINUserEntityUserSettings_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "RHINUserEntity.UserSettings");
-    private final static QName _ClinicalDocumentEntity_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "ClinicalDocumentEntity");
     private final static QName _ArrayOfFileEntity_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "ArrayOfFileEntity");
     private final static QName _RHINRepositoryEntity_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "RHINRepositoryEntity");
     private final static QName _ParticipantEntity_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "ParticipantEntity");
@@ -47,7 +46,6 @@ public class ObjectFactory {
     private final static QName _OrganizationEntity_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "OrganizationEntity");
     private final static QName _FilesEntity_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "FilesEntity");
     private final static QName _UserSessionEntity_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "UserSessionEntity");
-    private final static QName _ArrayOfClinicalDocumentEntity_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "ArrayOfClinicalDocumentEntity");
     private final static QName _UserDesktopActionsEntity_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "UserDesktopActionsEntity");
     private final static QName _RHINUserEntity_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "RHINUserEntity");
     private final static QName _RHINUserEntityUserPermissions_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "RHINUserEntity.UserPermissions");
@@ -57,24 +55,53 @@ public class ObjectFactory {
     private final static QName _ArrayOfRHINUserEntityUserOrganizations_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "ArrayOfRHINUserEntity.UserOrganizations");
     private final static QName _FileEntity_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "FileEntity");
     private final static QName _UserDesktopActionEntity_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "UserDesktopActionEntity");
+    private final static QName _FilesEntityFiles_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "Files");
+    private final static QName _RHINUserEntityUserAcknowledgementSignedName_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "SignedName");
+    private final static QName _RHINUserEntityUserAcknowledgementAcknowledgedText_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "AcknowledgedText");
+    private final static QName _RHINUserEntityUserAcknowledgementCreateDate_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "CreateDate");
     private final static QName _FileEntityFilePath_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "FilePath");
     private final static QName _FileEntityFileExtension_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "FileExtension");
     private final static QName _FileEntityFileName_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "FileName");
     private final static QName _FileEntityFileData_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "FileData");
-    private final static QName _GenericEntityStringList_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "StringList");
-    private final static QName _GenericEntityIntList_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "IntList");
+    private final static QName _RHINUserEntityUserPermissionsPermission_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "Permission");
+    private final static QName _RepositoryEntityENSSendMapping_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "ENSSendMapping");
+    private final static QName _RepositoryEntityXDSDatabaseName_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "XDSDatabaseName");
+    private final static QName _RepositoryEntityDICOMID_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "DICOMID");
+    private final static QName _RepositoryEntityRepositoryKey_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "RepositoryKey");
+    private final static QName _RepositoryEntityGatewayHL7UploadFolder_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "GatewayHL7UploadFolder");
+    private final static QName _RepositoryEntitySFTPRetrieveFolderUsername_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "SFTPRetrieveFolderUsername");
+    private final static QName _RepositoryEntityLastUpdateDateTime_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "LastUpdateDateTime");
+    private final static QName _RepositoryEntityInterfaceDBConnectionString_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "InterfaceDBConnectionString");
+    private final static QName _RepositoryEntityGatewayHL7SenderIPAddress_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "GatewayHL7SenderIPAddress");
+    private final static QName _RepositoryEntityRepositoryName_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "RepositoryName");
+    private final static QName _RepositoryEntityQueuedMessageFolder_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "QueuedMessageFolder");
+    private final static QName _RepositoryEntityDICOMSerialNumber_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "DICOMSerialNumber");
+    private final static QName _RepositoryEntityGatewayDownloadFolder_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "GatewayDownloadFolder");
+    private final static QName _RepositoryEntitySFTPRetrieveFolderPassword_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "SFTPRetrieveFolderPassword");
+    private final static QName _RepositoryEntityDICOMNamespace_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "DICOMNamespace");
+    private final static QName _RepositoryEntityGatewayDefaultAreaCode_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "GatewayDefaultAreaCode");
+    private final static QName _RepositoryEntityXDSDBConnectionString_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "XDSDBConnectionString");
+    private final static QName _RepositoryEntityConnectionString_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "ConnectionString");
+    private final static QName _RepositoryEntityGatewayDownloadFilePrefix_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "GatewayDownloadFilePrefix");
+    private final static QName _RepositoryEntityUserUpdated_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "UserUpdated");
+    private final static QName _RepositoryEntityGatewayUploadFolder_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "GatewayUploadFolder");
+    private final static QName _RepositoryEntitySFTPRetrieveFolderURI_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "SFTPRetrieveFolderURI");
+    private final static QName _RepositoryEntityRepositoryShortName_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "RepositoryShortName");
+    private final static QName _RepositoryEntityDatabaseName_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "DatabaseName");
+    private final static QName _RepositoryEntityGatewayUploadFileTypeFilters_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "GatewayUploadFileTypeFilters");
+    private final static QName _RepositoryEntityOID_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "OID");
+    private final static QName _RepositoryEntityInterfaceDatabaseName_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "InterfaceDatabaseName");
+    private final static QName _RepositoryEntityGatewayAllowedIPAddress_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "GatewayAllowedIPAddress");
+    private final static QName _RepositoryEntityDICOMLinkedDestination_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "DICOMLinkedDestination");
+    private final static QName _RepositoryEntityConfigurationFileLink_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "ConfigurationFileLink");
+    private final static QName _RHINUserEntityUserSettingsSettingValue_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "SettingValue");
+    private final static QName _RHINUserEntityUserSettingsSetting_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "Setting");
+    private final static QName _UserDesktopActionsEntityUserDesktopActionList_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "UserDesktopActionList");
     private final static QName _EntityApplicationName_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "ApplicationName");
     private final static QName _EntityApplicationVersion_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "ApplicationVersion");
     private final static QName _EntityError_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "Error");
-    private final static QName _RHINUserEntityUserAcknowledgementSignedName_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "SignedName");
-    private final static QName _RHINUserEntityUserAcknowledgementAcknowledgedText_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "AcknowledgedText");
-    private final static QName _RHINUserEntityUserAcknowledgementCreateDate_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "CreateDate");
     private final static QName _RHINFileEntityFile_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "File");
     private final static QName _RHINFileEntityDocument_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "Document");
-    private final static QName _RepositorySessionEntitySessionToken_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "SessionToken");
-    private final static QName _RepositorySessionEntitySessionEndDateTime_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "SessionEndDateTime");
-    private final static QName _RHINUserEntityUserSettingsSettingValue_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "SettingValue");
-    private final static QName _RHINUserEntityUserSettingsSetting_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "Setting");
     private final static QName _DocumentEntityThumbnailLink_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "ThumbnailLink");
     private final static QName _DocumentEntityExtension_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "Extension");
     private final static QName _DocumentEntityDocumentDescription_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "DocumentDescription");
@@ -85,38 +112,15 @@ public class ObjectFactory {
     private final static QName _DocumentEntityDocumentTitle_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "DocumentTitle");
     private final static QName _DocumentEntityRHINUserDisplayName_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "RHINUserDisplayName");
     private final static QName _DocumentEntityTypeAndSubType_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "TypeAndSubType");
-    private final static QName _UserDesktopActionsEntityUserDesktopActionList_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "UserDesktopActionList");
-    private final static QName _RHINUserEntityUserOrganizationsOrganizationNameAbbreviated_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "OrganizationNameAbbreviated");
     private final static QName _RHINRepositoryEntityRepositoryDetails_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "RepositoryDetails");
     private final static QName _RHINRepositoryEntityReferringOrganization_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "ReferringOrganization");
     private final static QName _RHINRepositoryEntityParticipant_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "Participant");
     private final static QName _RHINRepositoryEntitySession_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "Session");
-    private final static QName _RHINFilesEntityFiles_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "Files");
-    private final static QName _RepositoryEntityDICOMSerialNumber_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "DICOMSerialNumber");
-    private final static QName _RepositoryEntityENSSendMapping_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "ENSSendMapping");
-    private final static QName _RepositoryEntityXDSDatabaseName_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "XDSDatabaseName");
-    private final static QName _RepositoryEntityGatewayDownloadFolder_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "GatewayDownloadFolder");
-    private final static QName _RepositoryEntityDICOMID_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "DICOMID");
-    private final static QName _RepositoryEntityDICOMNamespace_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "DICOMNamespace");
-    private final static QName _RepositoryEntityGatewayDefaultAreaCode_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "GatewayDefaultAreaCode");
-    private final static QName _RepositoryEntityXDSDBConnectionString_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "XDSDBConnectionString");
-    private final static QName _RepositoryEntityConnectionString_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "ConnectionString");
-    private final static QName _RepositoryEntityRepositoryKey_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "RepositoryKey");
-    private final static QName _RepositoryEntityGatewayHL7UploadFolder_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "GatewayHL7UploadFolder");
-    private final static QName _RepositoryEntityGatewayDownloadFilePrefix_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "GatewayDownloadFilePrefix");
-    private final static QName _RepositoryEntityUserUpdated_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "UserUpdated");
-    private final static QName _RepositoryEntityGatewayUploadFolder_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "GatewayUploadFolder");
-    private final static QName _RepositoryEntityLastUpdateDateTime_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "LastUpdateDateTime");
-    private final static QName _RepositoryEntityInterfaceDBConnectionString_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "InterfaceDBConnectionString");
-    private final static QName _RepositoryEntityGatewayHL7SenderIPAddress_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "GatewayHL7SenderIPAddress");
-    private final static QName _RepositoryEntityRepositoryShortName_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "RepositoryShortName");
-    private final static QName _RepositoryEntityDatabaseName_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "DatabaseName");
-    private final static QName _RepositoryEntityGatewayUploadFileTypeFilters_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "GatewayUploadFileTypeFilters");
-    private final static QName _RepositoryEntityInterfaceDatabaseName_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "InterfaceDatabaseName");
-    private final static QName _RepositoryEntityRepositoryName_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "RepositoryName");
-    private final static QName _RepositoryEntityGatewayAllowedIPAddress_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "GatewayAllowedIPAddress");
-    private final static QName _RepositoryEntityConfigurationFileLink_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "ConfigurationFileLink");
-    private final static QName _RHINUserEntityUserPermissionsPermission_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "Permission");
+    private final static QName _RepositorySessionEntitySessionToken_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "SessionToken");
+    private final static QName _RepositorySessionEntitySessionEndDateTime_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "SessionEndDateTime");
+    private final static QName _RHINUserEntityUserOrganizationsOrganizationNameAbbreviated_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "OrganizationNameAbbreviated");
+    private final static QName _GenericEntityStringList_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "StringList");
+    private final static QName _GenericEntityIntList_QNAME = new QName("http://schemas.datacontract.org/2004/07/HIELibrary.Entities", "IntList");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: org.datacontract.schemas._2004._07.hielibrary
@@ -158,11 +162,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link PatientEntity }
+     * Create an instance of {@link PatientRMPIEntity }
      * 
      */
-    public PatientEntity createPatientEntity() {
-        return new PatientEntity();
+    public PatientRMPIEntity createPatientRMPIEntity() {
+        return new PatientRMPIEntity();
     }
 
     /**
@@ -171,14 +175,6 @@ public class ObjectFactory {
      */
     public RHINUserEntity createRHINUserEntity() {
         return new RHINUserEntity();
-    }
-
-    /**
-     * Create an instance of {@link ArrayOfClinicalDocumentEntity }
-     * 
-     */
-    public ArrayOfClinicalDocumentEntity createArrayOfClinicalDocumentEntity() {
-        return new ArrayOfClinicalDocumentEntity();
     }
 
     /**
@@ -350,19 +346,20 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ClinicalDocumentEntity }
-     * 
-     */
-    public ClinicalDocumentEntity createClinicalDocumentEntity() {
-        return new ClinicalDocumentEntity();
-    }
-
-    /**
      * Create an instance of {@link ArrayOfFileEntity }
      * 
      */
     public ArrayOfFileEntity createArrayOfFileEntity() {
         return new ArrayOfFileEntity();
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link PatientRMPIEntity }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "PatientRMPIEntity")
+    public JAXBElement<PatientRMPIEntity> createPatientRMPIEntity(PatientRMPIEntity value) {
+        return new JAXBElement<PatientRMPIEntity>(_PatientRMPIEntity_QNAME, PatientRMPIEntity.class, null, value);
     }
 
     /**
@@ -402,15 +399,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link PatientEntity }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "PatientEntity")
-    public JAXBElement<PatientEntity> createPatientEntity(PatientEntity value) {
-        return new JAXBElement<PatientEntity>(_PatientEntity_QNAME, PatientEntity.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link DocumentEntity }{@code >}}
      * 
      */
@@ -426,15 +414,6 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "RHINUserEntity.UserSettings")
     public JAXBElement<RHINUserEntityUserSettings> createRHINUserEntityUserSettings(RHINUserEntityUserSettings value) {
         return new JAXBElement<RHINUserEntityUserSettings>(_RHINUserEntityUserSettings_QNAME, RHINUserEntityUserSettings.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ClinicalDocumentEntity }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "ClinicalDocumentEntity")
-    public JAXBElement<ClinicalDocumentEntity> createClinicalDocumentEntity(ClinicalDocumentEntity value) {
-        return new JAXBElement<ClinicalDocumentEntity>(_ClinicalDocumentEntity_QNAME, ClinicalDocumentEntity.class, null, value);
     }
 
     /**
@@ -546,15 +525,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ArrayOfClinicalDocumentEntity }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "ArrayOfClinicalDocumentEntity")
-    public JAXBElement<ArrayOfClinicalDocumentEntity> createArrayOfClinicalDocumentEntity(ArrayOfClinicalDocumentEntity value) {
-        return new JAXBElement<ArrayOfClinicalDocumentEntity>(_ArrayOfClinicalDocumentEntity_QNAME, ArrayOfClinicalDocumentEntity.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link UserDesktopActionsEntity }{@code >}}
      * 
      */
@@ -636,6 +606,42 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ArrayOfFileEntity }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "Files", scope = FilesEntity.class)
+    public JAXBElement<ArrayOfFileEntity> createFilesEntityFiles(ArrayOfFileEntity value) {
+        return new JAXBElement<ArrayOfFileEntity>(_FilesEntityFiles_QNAME, ArrayOfFileEntity.class, FilesEntity.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "SignedName", scope = RHINUserEntityUserAcknowledgement.class)
+    public JAXBElement<String> createRHINUserEntityUserAcknowledgementSignedName(String value) {
+        return new JAXBElement<String>(_RHINUserEntityUserAcknowledgementSignedName_QNAME, String.class, RHINUserEntityUserAcknowledgement.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "AcknowledgedText", scope = RHINUserEntityUserAcknowledgement.class)
+    public JAXBElement<String> createRHINUserEntityUserAcknowledgementAcknowledgedText(String value) {
+        return new JAXBElement<String>(_RHINUserEntityUserAcknowledgementAcknowledgedText_QNAME, String.class, RHINUserEntityUserAcknowledgement.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "CreateDate", scope = RHINUserEntityUserAcknowledgement.class)
+    public JAXBElement<XMLGregorianCalendar> createRHINUserEntityUserAcknowledgementCreateDate(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_RHINUserEntityUserAcknowledgementCreateDate_QNAME, XMLGregorianCalendar.class, RHINUserEntityUserAcknowledgement.class, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
@@ -672,21 +678,318 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ArrayOfstring }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "StringList", scope = GenericEntity.class)
-    public JAXBElement<ArrayOfstring> createGenericEntityStringList(ArrayOfstring value) {
-        return new JAXBElement<ArrayOfstring>(_GenericEntityStringList_QNAME, ArrayOfstring.class, GenericEntity.class, value);
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "Permission", scope = RHINUserEntityUserPermissions.class)
+    public JAXBElement<String> createRHINUserEntityUserPermissionsPermission(String value) {
+        return new JAXBElement<String>(_RHINUserEntityUserPermissionsPermission_QNAME, String.class, RHINUserEntityUserPermissions.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ArrayOfint }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "IntList", scope = GenericEntity.class)
-    public JAXBElement<ArrayOfint> createGenericEntityIntList(ArrayOfint value) {
-        return new JAXBElement<ArrayOfint>(_GenericEntityIntList_QNAME, ArrayOfint.class, GenericEntity.class, value);
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "ENSSendMapping", scope = RepositoryEntity.class)
+    public JAXBElement<String> createRepositoryEntityENSSendMapping(String value) {
+        return new JAXBElement<String>(_RepositoryEntityENSSendMapping_QNAME, String.class, RepositoryEntity.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "XDSDatabaseName", scope = RepositoryEntity.class)
+    public JAXBElement<String> createRepositoryEntityXDSDatabaseName(String value) {
+        return new JAXBElement<String>(_RepositoryEntityXDSDatabaseName_QNAME, String.class, RepositoryEntity.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "DICOMID", scope = RepositoryEntity.class)
+    public JAXBElement<String> createRepositoryEntityDICOMID(String value) {
+        return new JAXBElement<String>(_RepositoryEntityDICOMID_QNAME, String.class, RepositoryEntity.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "RepositoryKey", scope = RepositoryEntity.class)
+    public JAXBElement<String> createRepositoryEntityRepositoryKey(String value) {
+        return new JAXBElement<String>(_RepositoryEntityRepositoryKey_QNAME, String.class, RepositoryEntity.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "GatewayHL7UploadFolder", scope = RepositoryEntity.class)
+    public JAXBElement<String> createRepositoryEntityGatewayHL7UploadFolder(String value) {
+        return new JAXBElement<String>(_RepositoryEntityGatewayHL7UploadFolder_QNAME, String.class, RepositoryEntity.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "SFTPRetrieveFolderUsername", scope = RepositoryEntity.class)
+    public JAXBElement<String> createRepositoryEntitySFTPRetrieveFolderUsername(String value) {
+        return new JAXBElement<String>(_RepositoryEntitySFTPRetrieveFolderUsername_QNAME, String.class, RepositoryEntity.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "LastUpdateDateTime", scope = RepositoryEntity.class)
+    public JAXBElement<XMLGregorianCalendar> createRepositoryEntityLastUpdateDateTime(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_RepositoryEntityLastUpdateDateTime_QNAME, XMLGregorianCalendar.class, RepositoryEntity.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "InterfaceDBConnectionString", scope = RepositoryEntity.class)
+    public JAXBElement<String> createRepositoryEntityInterfaceDBConnectionString(String value) {
+        return new JAXBElement<String>(_RepositoryEntityInterfaceDBConnectionString_QNAME, String.class, RepositoryEntity.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "GatewayHL7SenderIPAddress", scope = RepositoryEntity.class)
+    public JAXBElement<String> createRepositoryEntityGatewayHL7SenderIPAddress(String value) {
+        return new JAXBElement<String>(_RepositoryEntityGatewayHL7SenderIPAddress_QNAME, String.class, RepositoryEntity.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "RepositoryName", scope = RepositoryEntity.class)
+    public JAXBElement<String> createRepositoryEntityRepositoryName(String value) {
+        return new JAXBElement<String>(_RepositoryEntityRepositoryName_QNAME, String.class, RepositoryEntity.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "QueuedMessageFolder", scope = RepositoryEntity.class)
+    public JAXBElement<String> createRepositoryEntityQueuedMessageFolder(String value) {
+        return new JAXBElement<String>(_RepositoryEntityQueuedMessageFolder_QNAME, String.class, RepositoryEntity.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "DICOMSerialNumber", scope = RepositoryEntity.class)
+    public JAXBElement<String> createRepositoryEntityDICOMSerialNumber(String value) {
+        return new JAXBElement<String>(_RepositoryEntityDICOMSerialNumber_QNAME, String.class, RepositoryEntity.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "GatewayDownloadFolder", scope = RepositoryEntity.class)
+    public JAXBElement<String> createRepositoryEntityGatewayDownloadFolder(String value) {
+        return new JAXBElement<String>(_RepositoryEntityGatewayDownloadFolder_QNAME, String.class, RepositoryEntity.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "SFTPRetrieveFolderPassword", scope = RepositoryEntity.class)
+    public JAXBElement<String> createRepositoryEntitySFTPRetrieveFolderPassword(String value) {
+        return new JAXBElement<String>(_RepositoryEntitySFTPRetrieveFolderPassword_QNAME, String.class, RepositoryEntity.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "DICOMNamespace", scope = RepositoryEntity.class)
+    public JAXBElement<String> createRepositoryEntityDICOMNamespace(String value) {
+        return new JAXBElement<String>(_RepositoryEntityDICOMNamespace_QNAME, String.class, RepositoryEntity.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "GatewayDefaultAreaCode", scope = RepositoryEntity.class)
+    public JAXBElement<String> createRepositoryEntityGatewayDefaultAreaCode(String value) {
+        return new JAXBElement<String>(_RepositoryEntityGatewayDefaultAreaCode_QNAME, String.class, RepositoryEntity.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "XDSDBConnectionString", scope = RepositoryEntity.class)
+    public JAXBElement<String> createRepositoryEntityXDSDBConnectionString(String value) {
+        return new JAXBElement<String>(_RepositoryEntityXDSDBConnectionString_QNAME, String.class, RepositoryEntity.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "ConnectionString", scope = RepositoryEntity.class)
+    public JAXBElement<String> createRepositoryEntityConnectionString(String value) {
+        return new JAXBElement<String>(_RepositoryEntityConnectionString_QNAME, String.class, RepositoryEntity.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "GatewayDownloadFilePrefix", scope = RepositoryEntity.class)
+    public JAXBElement<String> createRepositoryEntityGatewayDownloadFilePrefix(String value) {
+        return new JAXBElement<String>(_RepositoryEntityGatewayDownloadFilePrefix_QNAME, String.class, RepositoryEntity.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "UserUpdated", scope = RepositoryEntity.class)
+    public JAXBElement<String> createRepositoryEntityUserUpdated(String value) {
+        return new JAXBElement<String>(_RepositoryEntityUserUpdated_QNAME, String.class, RepositoryEntity.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "GatewayUploadFolder", scope = RepositoryEntity.class)
+    public JAXBElement<String> createRepositoryEntityGatewayUploadFolder(String value) {
+        return new JAXBElement<String>(_RepositoryEntityGatewayUploadFolder_QNAME, String.class, RepositoryEntity.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "SFTPRetrieveFolderURI", scope = RepositoryEntity.class)
+    public JAXBElement<String> createRepositoryEntitySFTPRetrieveFolderURI(String value) {
+        return new JAXBElement<String>(_RepositoryEntitySFTPRetrieveFolderURI_QNAME, String.class, RepositoryEntity.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "RepositoryShortName", scope = RepositoryEntity.class)
+    public JAXBElement<String> createRepositoryEntityRepositoryShortName(String value) {
+        return new JAXBElement<String>(_RepositoryEntityRepositoryShortName_QNAME, String.class, RepositoryEntity.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "DatabaseName", scope = RepositoryEntity.class)
+    public JAXBElement<String> createRepositoryEntityDatabaseName(String value) {
+        return new JAXBElement<String>(_RepositoryEntityDatabaseName_QNAME, String.class, RepositoryEntity.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "GatewayUploadFileTypeFilters", scope = RepositoryEntity.class)
+    public JAXBElement<String> createRepositoryEntityGatewayUploadFileTypeFilters(String value) {
+        return new JAXBElement<String>(_RepositoryEntityGatewayUploadFileTypeFilters_QNAME, String.class, RepositoryEntity.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "OID", scope = RepositoryEntity.class)
+    public JAXBElement<String> createRepositoryEntityOID(String value) {
+        return new JAXBElement<String>(_RepositoryEntityOID_QNAME, String.class, RepositoryEntity.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "InterfaceDatabaseName", scope = RepositoryEntity.class)
+    public JAXBElement<String> createRepositoryEntityInterfaceDatabaseName(String value) {
+        return new JAXBElement<String>(_RepositoryEntityInterfaceDatabaseName_QNAME, String.class, RepositoryEntity.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "GatewayAllowedIPAddress", scope = RepositoryEntity.class)
+    public JAXBElement<String> createRepositoryEntityGatewayAllowedIPAddress(String value) {
+        return new JAXBElement<String>(_RepositoryEntityGatewayAllowedIPAddress_QNAME, String.class, RepositoryEntity.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "DICOMLinkedDestination", scope = RepositoryEntity.class)
+    public JAXBElement<String> createRepositoryEntityDICOMLinkedDestination(String value) {
+        return new JAXBElement<String>(_RepositoryEntityDICOMLinkedDestination_QNAME, String.class, RepositoryEntity.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "ConfigurationFileLink", scope = RepositoryEntity.class)
+    public JAXBElement<String> createRepositoryEntityConfigurationFileLink(String value) {
+        return new JAXBElement<String>(_RepositoryEntityConfigurationFileLink_QNAME, String.class, RepositoryEntity.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "SettingValue", scope = RHINUserEntityUserSettings.class)
+    public JAXBElement<String> createRHINUserEntityUserSettingsSettingValue(String value) {
+        return new JAXBElement<String>(_RHINUserEntityUserSettingsSettingValue_QNAME, String.class, RHINUserEntityUserSettings.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "Setting", scope = RHINUserEntityUserSettings.class)
+    public JAXBElement<String> createRHINUserEntityUserSettingsSetting(String value) {
+        return new JAXBElement<String>(_RHINUserEntityUserSettingsSetting_QNAME, String.class, RHINUserEntityUserSettings.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ArrayOfRHINFileEntity }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "Files", scope = RHINFilesEntity.class)
+    public JAXBElement<ArrayOfRHINFileEntity> createRHINFilesEntityFiles(ArrayOfRHINFileEntity value) {
+        return new JAXBElement<ArrayOfRHINFileEntity>(_FilesEntityFiles_QNAME, ArrayOfRHINFileEntity.class, RHINFilesEntity.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ArrayOfUserDesktopActionEntity }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "UserDesktopActionList", scope = UserDesktopActionsEntity.class)
+    public JAXBElement<ArrayOfUserDesktopActionEntity> createUserDesktopActionsEntityUserDesktopActionList(ArrayOfUserDesktopActionEntity value) {
+        return new JAXBElement<ArrayOfUserDesktopActionEntity>(_UserDesktopActionsEntityUserDesktopActionList_QNAME, ArrayOfUserDesktopActionEntity.class, UserDesktopActionsEntity.class, value);
     }
 
     /**
@@ -717,33 +1020,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "SignedName", scope = RHINUserEntityUserAcknowledgement.class)
-    public JAXBElement<String> createRHINUserEntityUserAcknowledgementSignedName(String value) {
-        return new JAXBElement<String>(_RHINUserEntityUserAcknowledgementSignedName_QNAME, String.class, RHINUserEntityUserAcknowledgement.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "AcknowledgedText", scope = RHINUserEntityUserAcknowledgement.class)
-    public JAXBElement<String> createRHINUserEntityUserAcknowledgementAcknowledgedText(String value) {
-        return new JAXBElement<String>(_RHINUserEntityUserAcknowledgementAcknowledgedText_QNAME, String.class, RHINUserEntityUserAcknowledgement.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "CreateDate", scope = RHINUserEntityUserAcknowledgement.class)
-    public JAXBElement<XMLGregorianCalendar> createRHINUserEntityUserAcknowledgementCreateDate(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_RHINUserEntityUserAcknowledgementCreateDate_QNAME, XMLGregorianCalendar.class, RHINUserEntityUserAcknowledgement.class, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link FileEntity }{@code >}}
      * 
      */
@@ -759,42 +1035,6 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "Document", scope = RHINFileEntity.class)
     public JAXBElement<DocumentEntity> createRHINFileEntityDocument(DocumentEntity value) {
         return new JAXBElement<DocumentEntity>(_RHINFileEntityDocument_QNAME, DocumentEntity.class, RHINFileEntity.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "SessionToken", scope = RepositorySessionEntity.class)
-    public JAXBElement<String> createRepositorySessionEntitySessionToken(String value) {
-        return new JAXBElement<String>(_RepositorySessionEntitySessionToken_QNAME, String.class, RepositorySessionEntity.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "SessionEndDateTime", scope = RepositorySessionEntity.class)
-    public JAXBElement<XMLGregorianCalendar> createRepositorySessionEntitySessionEndDateTime(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_RepositorySessionEntitySessionEndDateTime_QNAME, XMLGregorianCalendar.class, RepositorySessionEntity.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "SettingValue", scope = RHINUserEntityUserSettings.class)
-    public JAXBElement<String> createRHINUserEntityUserSettingsSettingValue(String value) {
-        return new JAXBElement<String>(_RHINUserEntityUserSettingsSettingValue_QNAME, String.class, RHINUserEntityUserSettings.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "Setting", scope = RHINUserEntityUserSettings.class)
-    public JAXBElement<String> createRHINUserEntityUserSettingsSetting(String value) {
-        return new JAXBElement<String>(_RHINUserEntityUserSettingsSetting_QNAME, String.class, RHINUserEntityUserSettings.class, value);
     }
 
     /**
@@ -888,24 +1128,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ArrayOfUserDesktopActionEntity }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "UserDesktopActionList", scope = UserDesktopActionsEntity.class)
-    public JAXBElement<ArrayOfUserDesktopActionEntity> createUserDesktopActionsEntityUserDesktopActionList(ArrayOfUserDesktopActionEntity value) {
-        return new JAXBElement<ArrayOfUserDesktopActionEntity>(_UserDesktopActionsEntityUserDesktopActionList_QNAME, ArrayOfUserDesktopActionEntity.class, UserDesktopActionsEntity.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "OrganizationNameAbbreviated", scope = RHINUserEntityUserOrganizations.class)
-    public JAXBElement<String> createRHINUserEntityUserOrganizationsOrganizationNameAbbreviated(String value) {
-        return new JAXBElement<String>(_RHINUserEntityUserOrganizationsOrganizationNameAbbreviated_QNAME, String.class, RHINUserEntityUserOrganizations.class, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link RepositoryEntity }{@code >}}
      * 
      */
@@ -942,246 +1164,48 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ArrayOfRHINFileEntity }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "Files", scope = RHINFilesEntity.class)
-    public JAXBElement<ArrayOfRHINFileEntity> createRHINFilesEntityFiles(ArrayOfRHINFileEntity value) {
-        return new JAXBElement<ArrayOfRHINFileEntity>(_RHINFilesEntityFiles_QNAME, ArrayOfRHINFileEntity.class, RHINFilesEntity.class, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "DICOMSerialNumber", scope = RepositoryEntity.class)
-    public JAXBElement<String> createRepositoryEntityDICOMSerialNumber(String value) {
-        return new JAXBElement<String>(_RepositoryEntityDICOMSerialNumber_QNAME, String.class, RepositoryEntity.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "ENSSendMapping", scope = RepositoryEntity.class)
-    public JAXBElement<String> createRepositoryEntityENSSendMapping(String value) {
-        return new JAXBElement<String>(_RepositoryEntityENSSendMapping_QNAME, String.class, RepositoryEntity.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "XDSDatabaseName", scope = RepositoryEntity.class)
-    public JAXBElement<String> createRepositoryEntityXDSDatabaseName(String value) {
-        return new JAXBElement<String>(_RepositoryEntityXDSDatabaseName_QNAME, String.class, RepositoryEntity.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "GatewayDownloadFolder", scope = RepositoryEntity.class)
-    public JAXBElement<String> createRepositoryEntityGatewayDownloadFolder(String value) {
-        return new JAXBElement<String>(_RepositoryEntityGatewayDownloadFolder_QNAME, String.class, RepositoryEntity.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "DICOMID", scope = RepositoryEntity.class)
-    public JAXBElement<String> createRepositoryEntityDICOMID(String value) {
-        return new JAXBElement<String>(_RepositoryEntityDICOMID_QNAME, String.class, RepositoryEntity.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "DICOMNamespace", scope = RepositoryEntity.class)
-    public JAXBElement<String> createRepositoryEntityDICOMNamespace(String value) {
-        return new JAXBElement<String>(_RepositoryEntityDICOMNamespace_QNAME, String.class, RepositoryEntity.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "GatewayDefaultAreaCode", scope = RepositoryEntity.class)
-    public JAXBElement<String> createRepositoryEntityGatewayDefaultAreaCode(String value) {
-        return new JAXBElement<String>(_RepositoryEntityGatewayDefaultAreaCode_QNAME, String.class, RepositoryEntity.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "XDSDBConnectionString", scope = RepositoryEntity.class)
-    public JAXBElement<String> createRepositoryEntityXDSDBConnectionString(String value) {
-        return new JAXBElement<String>(_RepositoryEntityXDSDBConnectionString_QNAME, String.class, RepositoryEntity.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "ConnectionString", scope = RepositoryEntity.class)
-    public JAXBElement<String> createRepositoryEntityConnectionString(String value) {
-        return new JAXBElement<String>(_RepositoryEntityConnectionString_QNAME, String.class, RepositoryEntity.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "RepositoryKey", scope = RepositoryEntity.class)
-    public JAXBElement<String> createRepositoryEntityRepositoryKey(String value) {
-        return new JAXBElement<String>(_RepositoryEntityRepositoryKey_QNAME, String.class, RepositoryEntity.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "GatewayHL7UploadFolder", scope = RepositoryEntity.class)
-    public JAXBElement<String> createRepositoryEntityGatewayHL7UploadFolder(String value) {
-        return new JAXBElement<String>(_RepositoryEntityGatewayHL7UploadFolder_QNAME, String.class, RepositoryEntity.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "GatewayDownloadFilePrefix", scope = RepositoryEntity.class)
-    public JAXBElement<String> createRepositoryEntityGatewayDownloadFilePrefix(String value) {
-        return new JAXBElement<String>(_RepositoryEntityGatewayDownloadFilePrefix_QNAME, String.class, RepositoryEntity.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "UserUpdated", scope = RepositoryEntity.class)
-    public JAXBElement<String> createRepositoryEntityUserUpdated(String value) {
-        return new JAXBElement<String>(_RepositoryEntityUserUpdated_QNAME, String.class, RepositoryEntity.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "GatewayUploadFolder", scope = RepositoryEntity.class)
-    public JAXBElement<String> createRepositoryEntityGatewayUploadFolder(String value) {
-        return new JAXBElement<String>(_RepositoryEntityGatewayUploadFolder_QNAME, String.class, RepositoryEntity.class, value);
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "SessionToken", scope = RepositorySessionEntity.class)
+    public JAXBElement<String> createRepositorySessionEntitySessionToken(String value) {
+        return new JAXBElement<String>(_RepositorySessionEntitySessionToken_QNAME, String.class, RepositorySessionEntity.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "LastUpdateDateTime", scope = RepositoryEntity.class)
-    public JAXBElement<XMLGregorianCalendar> createRepositoryEntityLastUpdateDateTime(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_RepositoryEntityLastUpdateDateTime_QNAME, XMLGregorianCalendar.class, RepositoryEntity.class, value);
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "SessionEndDateTime", scope = RepositorySessionEntity.class)
+    public JAXBElement<XMLGregorianCalendar> createRepositorySessionEntitySessionEndDateTime(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_RepositorySessionEntitySessionEndDateTime_QNAME, XMLGregorianCalendar.class, RepositorySessionEntity.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "InterfaceDBConnectionString", scope = RepositoryEntity.class)
-    public JAXBElement<String> createRepositoryEntityInterfaceDBConnectionString(String value) {
-        return new JAXBElement<String>(_RepositoryEntityInterfaceDBConnectionString_QNAME, String.class, RepositoryEntity.class, value);
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "OrganizationNameAbbreviated", scope = RHINUserEntityUserOrganizations.class)
+    public JAXBElement<String> createRHINUserEntityUserOrganizationsOrganizationNameAbbreviated(String value) {
+        return new JAXBElement<String>(_RHINUserEntityUserOrganizationsOrganizationNameAbbreviated_QNAME, String.class, RHINUserEntityUserOrganizations.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ArrayOfstring }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "GatewayHL7SenderIPAddress", scope = RepositoryEntity.class)
-    public JAXBElement<String> createRepositoryEntityGatewayHL7SenderIPAddress(String value) {
-        return new JAXBElement<String>(_RepositoryEntityGatewayHL7SenderIPAddress_QNAME, String.class, RepositoryEntity.class, value);
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "StringList", scope = GenericEntity.class)
+    public JAXBElement<ArrayOfstring> createGenericEntityStringList(ArrayOfstring value) {
+        return new JAXBElement<ArrayOfstring>(_GenericEntityStringList_QNAME, ArrayOfstring.class, GenericEntity.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ArrayOfint }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "RepositoryShortName", scope = RepositoryEntity.class)
-    public JAXBElement<String> createRepositoryEntityRepositoryShortName(String value) {
-        return new JAXBElement<String>(_RepositoryEntityRepositoryShortName_QNAME, String.class, RepositoryEntity.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "DatabaseName", scope = RepositoryEntity.class)
-    public JAXBElement<String> createRepositoryEntityDatabaseName(String value) {
-        return new JAXBElement<String>(_RepositoryEntityDatabaseName_QNAME, String.class, RepositoryEntity.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "GatewayUploadFileTypeFilters", scope = RepositoryEntity.class)
-    public JAXBElement<String> createRepositoryEntityGatewayUploadFileTypeFilters(String value) {
-        return new JAXBElement<String>(_RepositoryEntityGatewayUploadFileTypeFilters_QNAME, String.class, RepositoryEntity.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "InterfaceDatabaseName", scope = RepositoryEntity.class)
-    public JAXBElement<String> createRepositoryEntityInterfaceDatabaseName(String value) {
-        return new JAXBElement<String>(_RepositoryEntityInterfaceDatabaseName_QNAME, String.class, RepositoryEntity.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "RepositoryName", scope = RepositoryEntity.class)
-    public JAXBElement<String> createRepositoryEntityRepositoryName(String value) {
-        return new JAXBElement<String>(_RepositoryEntityRepositoryName_QNAME, String.class, RepositoryEntity.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "GatewayAllowedIPAddress", scope = RepositoryEntity.class)
-    public JAXBElement<String> createRepositoryEntityGatewayAllowedIPAddress(String value) {
-        return new JAXBElement<String>(_RepositoryEntityGatewayAllowedIPAddress_QNAME, String.class, RepositoryEntity.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "ConfigurationFileLink", scope = RepositoryEntity.class)
-    public JAXBElement<String> createRepositoryEntityConfigurationFileLink(String value) {
-        return new JAXBElement<String>(_RepositoryEntityConfigurationFileLink_QNAME, String.class, RepositoryEntity.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "Permission", scope = RHINUserEntityUserPermissions.class)
-    public JAXBElement<String> createRHINUserEntityUserPermissionsPermission(String value) {
-        return new JAXBElement<String>(_RHINUserEntityUserPermissionsPermission_QNAME, String.class, RHINUserEntityUserPermissions.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ArrayOfFileEntity }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "Files", scope = FilesEntity.class)
-    public JAXBElement<ArrayOfFileEntity> createFilesEntityFiles(ArrayOfFileEntity value) {
-        return new JAXBElement<ArrayOfFileEntity>(_RHINFilesEntityFiles_QNAME, ArrayOfFileEntity.class, FilesEntity.class, value);
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HIELibrary.Entities", name = "IntList", scope = GenericEntity.class)
+    public JAXBElement<ArrayOfint> createGenericEntityIntList(ArrayOfint value) {
+        return new JAXBElement<ArrayOfint>(_GenericEntityIntList_QNAME, ArrayOfint.class, GenericEntity.class, value);
     }
 
 }

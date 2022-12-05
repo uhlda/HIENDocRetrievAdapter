@@ -114,7 +114,7 @@ public class HIENDocRetrieveClient {
 		String response = null;
 		try {
 			response = rdPort.getCONNECTCCDADocument(AuthToken, uniqueKey, senderHCID);
-			logger.error("HIENDocRetrieveClient Response: "+response);            
+			logger.info("HIENDocRetrieveClient Response: "+response);            
 		} catch (Exception e) {
 			logger.error("error while calling RepositoryPatientCCDADocument service", e);
 		}

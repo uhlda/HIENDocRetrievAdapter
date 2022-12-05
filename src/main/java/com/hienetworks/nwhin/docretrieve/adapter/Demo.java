@@ -1,5 +1,8 @@
 package com.hienetworks.nwhin.docretrieve.adapter;
 
+import java.util.concurrent.CompletableFuture;
+import org.springframework.scheduling.annotation.Async;
+
 public class Demo {
 
     public static void main(String[] args) {
